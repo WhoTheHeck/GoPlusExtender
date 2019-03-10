@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name PGPExT-rescue)(type Legacy)(uri ${KIPRJMOD}/PGPExT-rescue.lib)(options "")(descr ""))
+  (lib (name additional_parts)(type Legacy)(uri E:/Dokumente/PG+Ext/PCB_kicadV5/additional_parts.lib)(options "")(descr ""))
+)
