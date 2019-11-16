@@ -14,7 +14,7 @@ This project aims to react to Go Plus events in a smart way. Only pushing the bu
 
 ## Concept
 hooking into LED driving transistors to analize patterns  
-ATTiny45 reads LED signals, processes them, controlls button and vibration motor.
+ATTiny45 reads LED signals, processes them, controlls button and vibration motor. Will be in deep sleep when using manual mode
 
 ## Schematic
 
@@ -29,12 +29,20 @@ ATTiny45 reads LED signals, processes them, controlls button and vibration motor
 
 ## Codebase
 
+### Main function
+main( ):  
+defines input/output pins  
+defines interrupts
+- input interrupt monitors LED patterns
+- timer interrupt gets battery voltage every our (also whenever you power it up)
+
 ### LED analizer functions
-BlueHandle()  
-GreenHandle()  
-RedHandle()  
-WhiteHandle()  
-YellowHandle()  
+BlueHandle( )  
+GreenHandle( )  
+RedHandle( )  
+WhiteHandle( )  
+YellowHandle( )  
+if the corresponding transistors get controlled the inputs at the ATTiny get pulled high, this enables interrupt-routine.  
 --- ? ---  
 WaitCount()  
 TrackReset()  
