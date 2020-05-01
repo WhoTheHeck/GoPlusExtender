@@ -1,6 +1,6 @@
 # GoPlusExtender
 
-<img src="images/rend3.bmp" width=200>
+<img src="images/rend3.bmp" width=300>
 
 ## Idea
 The goal of this project is to have the Go Plus modded in a way where it behaves comparable to the simple mod where you solder the vibration motor to the switch. In that simple mod basically everytime you plus would vibrate it will push the button automatically. At the end this results in constant button presses which on one hand drains the battery and on the other hand also always will push the button in events like "catch/spin succesfull", "item bag full", "connection-errors", etc.  
@@ -25,22 +25,22 @@ Everything can still be soldered by hand, using flux is recommended, especially 
 
 ### Go Plus Solderpoints & Wiring
 Soldering to the LED drivers is the most challenging part, take your time. In that case I recoommend securing the wires with some hot glue (not good practice... I know).
-* Polarity doesn't matter
+o Polarity doesn't matter
 W1 --> GoPlusPower+ (from battery connector)
 W2 --> GoPlusPower- (from battery connector)
 W3 --> BatteryPower+ (from BatteryPCB)
 W4 --> BatteryPower- (from BatteryPCB)
 W5 --> switch (from GoPlus upper left)
-W6 --> GoPlus- (where motor was soldered to GoPlus)*
-W7 --> GoPlus+ (where motor was soldered to GoPlus)*
-W8 --> Motor- ()*
-W9 --> Motor+ ()*
+W6 --> GoPlus- (where motor was soldered to GoPlus) o
+W7 --> GoPlus+ (where motor was soldered to GoPlus) o
+W8 --> Motor- (desolder from GoPlus, solder here) o
+W9 --> Motor+ (desolder from GoPlus, solder here) o
 W10 --> LED blue (upper IC, upper middle leg)
 W16 --> LED green (lower IC, lower middle leg)
 W18 --> LED red (upper IC, lower middle leg)
 W11,W12,W13,W14,W17 --> Programmer (careful: here correct polarity is important!)
 
-<img src="images/GoPlusSolderpoints.JPG" width=100>
+<img src="images/GoPlusSolderpoints.JPG" width=300>
 
 ## Codebase
 
