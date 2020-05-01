@@ -1,34 +1,46 @@
 # GoPlusExtender
 
-## ToDos:
-- ...
-
-## Gliederung
-- Idea
-- Concept
-- Schematic
-- Layout
-- Assembly
-- Codebase
+<img src="images/rend3.bmp" width=200>
 
 ## Idea
-The goal of this project was to have Go Plus modded in a way where it behaves comparable to the simple mod where you solder the vibration motor to the switch. In that simple mod basically everytime you plus would vibrate it will push the button automatically. At the end this results in constant button presses which on one hand drains the battery and on the other hand also always will push the button in events like "catch/spin succesfull", "item bag full", "connection-errors", etc.  
+The goal of this project is to have the Go Plus modded in a way where it behaves comparable to the simple mod where you solder the vibration motor to the switch. In that simple mod basically everytime you plus would vibrate it will push the button automatically. At the end this results in constant button presses which on one hand drains the battery and on the other hand also always will push the button in events like "catch/spin succesfull", "item bag full", "connection-errors", etc.  
 This project aims to react to Go Plus events in a smart way. Only pushing the button when it is necassary. While implementing that there were other convinient features addied like a rechargable LiPo-battery, low battery indicator, manual/automatic mode select, power save functionalities, change to manual catch mode for new pokemon and -very handy- custom vibration motor control! That enables custom vibration patterns which vibrate the motor in automation mode only when e.q. Go Plus disconnects from smartphone, item bag full or pokemon storage full.
 
 ## Concept
-hooking into LED driving transistors to analize patterns  
+Hook into LED driving transistors to analize patterns.
 ATTiny45 reads LED signals, processes them, controlls button and vibration motor. Will be in deep sleep when using manual mode
 
 ## Schematic
+find v1 in files
 
 ## Layout
+Due to the tiny footprint the PCB had to be done as 4layer board.
+find v1 in files
 
 ## Assembly
+
 ### PCB
+Necessary components can be found in PCB_BoM.html
+Everything can still be soldered by hand, using flux is recommended, especially the Analog Switch with the TSSOP-footprint will be trick otherwise. 
 
-### Go Plus Solderpoints
+### Go Plus Solderpoints & Wiring
+Soldering to the LED drivers is the most challenging part, take your time. In that case I recoommend securing the wires with some hot glue (not good practice... I know).
+* Polarity doesn't matter
+W1 --> GoPlusPower+ (from battery connector)
+W2 --> GoPlusPower- (from battery connector)
+W3 --> BatteryPower+ (from BatteryPCB)
+W4 --> BatteryPower- (from BatteryPCB)
+W5 --> switch (from GoPlus upper left)
+W6 --> GoPlus- (where motor was soldered to GoPlus)*
+W7 --> GoPlus+ (where motor was soldered to GoPlus)*
+W8 --> Motor- ()*
+W9 --> Motor+ ()*
+W10 --> LED blue (upper IC, upper middle leg)
+W16 --> LED green (lower IC, lower middle leg)
+W18 --> LED red (upper IC, lower middle leg)
+W11,W12,W13,W14,W17 --> Programmer (careful: here correct polarity is important!)
 
-### Wiring
+<img src="images/GoPlusSolderpoints.JPG" width=100>
 
 ## Codebase
 
