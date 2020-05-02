@@ -172,7 +172,7 @@ void goToSleep()                                            // credits: forum.ar
     sleep_cpu();                                            //go to sleep
     sleep_disable();
     cli();                                                  //wake up here, disable interrupts
-    GIMSK = (1<<PCIE0);                                     //setze PCIE Bit um PCINT Interrupt zu aktivieren
+    GIMSK = (1<<PCIE0);                                     //set PCIE Bit to enable PCINT interrupt
     PCMSK0 = 0b00001110;                                    //define LED-pins as interrupts
     batt_meas();                                            //measure batvoltage
     PORTB |= (1<<PINB0);                                    //PINB0 high - motor disconnected from Go+
