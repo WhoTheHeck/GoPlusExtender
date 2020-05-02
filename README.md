@@ -1,6 +1,8 @@
 # GoPlusExtender
 
-<img src="images/rend3.bmp" width=300>
+<img src="images/rend3.bmp" width=500>
+
+[![Demo video]](https://youtu.be/t_YZIJWOh5c)
 
 ## Idea
 The goal of this project is to have the Go Plus modded in a way where it behaves comparable to the simple mod where you solder the vibration motor to the switch. In that simple mod basically everytime you plus would vibrate it will push the button automatically. At the end this results in constant button presses which on one hand drains the battery and on the other hand also always will push the button in events like "catch/spin succesfull", "item bag full", "connection-errors", etc.  
@@ -40,7 +42,7 @@ W16 --> LED green (lower IC, lower middle leg)
 W18 --> LED red (upper IC, lower middle leg)  
 W11,W12,W13,W14,W17 --> Programmer (careful: here correct polarity is important!)  
   
-<img src="images/GoPlusSolderpoints.JPG" width=300>
+<img src="images/GoPlusSolderpoints.JPG" width=500>
 
 ## Codebase
 
@@ -103,4 +105,4 @@ Read measured voltage. Enable low-battery-LED in 3.1 .. 3.2V range. LED will be 
 ### Simulation
 Attached in files is the simulation file that can be used with LTSpice. It shows how the PWM pulsed signal of the LED drivers gets smoothed and reduced by the diode and resistor divider to then be read by the ATTiny as a compatible digital input.  
 
-<img src="images/led-pwm-simu.PNG" width=500>
+<img src="images/led-pwm-simu.PNG" width=1000>
