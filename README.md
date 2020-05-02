@@ -2,7 +2,7 @@
 
 <img src="images/rend3.bmp" width=500>
 
-[![Demo video]](https://youtu.be/t_YZIJWOh5c)
+[![Demo video](https://img.youtube.com/vi/t_YZIJWOh5c/maxresdefault.jpg)](https://youtu.be/t_YZIJWOh5c)
 
 ## Idea
 The goal of this project is to have the Go Plus modded in a way where it behaves comparable to the simple mod where you solder the vibration motor to the switch. In that simple mod basically everytime you plus would vibrate it will push the button automatically. At the end this results in constant button presses which on one hand drains the battery and on the other hand also always will push the button in events like "catch/spin succesfull", "item bag full", "connection-errors", etc.  
