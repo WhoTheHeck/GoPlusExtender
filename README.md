@@ -154,4 +154,4 @@ Attached in files is the simulation file that can be used with LTSpice. It shows
 
 ### GoPlus Model
 Files contain derived GoPlus model usable as reference for modeling.  
-<img src="images/..." width=500>
+<img src="Modell/GoPlusModel_v1/rend_bot.bmp" width=500>
